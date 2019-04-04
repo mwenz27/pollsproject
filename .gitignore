@@ -3,3 +3,4 @@ __pycache__
 .idea
 .env5pollsproject
 secrets.py
+extra_code.txt
