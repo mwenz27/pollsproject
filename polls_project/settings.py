@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
-# import django_heroku
+import django_heroku
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -24,11 +24,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # This is used for running it locally
-from secrets import SECRET_KEY
-SECRET_KEY = SECRET_KEY
+# from secrets import SECRET_KEY
+# SECRET_KEY = SECRET_KEY
 
 # ## this is for Heroku
-# SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = os.environ['SECRET_KEY']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -141,5 +141,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 # # this is for Heroku only
-# django_heroku.settings(locals())
+django_heroku.settings(locals())
 
