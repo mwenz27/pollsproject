@@ -16,8 +16,8 @@ urlpatterns = [
  #    url(r'^api/questions/$', api_views.QuestionList.as_view()),
  #    url(r'^api/questions/(?P&lt;pk&gt;[0-9]+)/$', api_views.QuestionDetail.as_view()),
  #    url(r'^api/choices/(?P&lt;pk&gt;[0-9]+)/$', api_views.ChoiceDetail.as_view()),
-    path('api/questions/$', api_views.QuestionList.as_view(), name='get_create'),
-    path('api/questions/(?P&lt;pk&gt;[0-9]+)/$', api_views.QuestionDetail.as_view(), name='get_delete'),
-    path('api/choices/(?P&lt;pk&gt;[0-9]+)/$', api_views.ChoiceDetail.as_view(), name='get_choice'),
+    path('api/questions/', api_views.QuestionList.as_view()),
+    path('api/questions/<int:pk>/', api_views.QuestionDetail.as_view()),
+    path('api/choices/<int:pk>/', api_views.ChoiceDetail.as_view()),
 
 ]
